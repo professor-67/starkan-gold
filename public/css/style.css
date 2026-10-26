@@ -1,2 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');:root{--bg:#11110f;--panel:#1b1a17;--gold:#c8a45d;--light:#f5f0e7;--muted:#c4bbaa;--line:#3b3428}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--light);font-family:'DM Sans',Arial,sans-serif;line-height:1.7}body[dir=rtl]{font-family:'Noto Naskh Arabic',serif}a{color:inherit;text-decoration:none}.announcement{text-align:center;padding:7px;background:#24221c;color:#e5cc8c;font-size:.82rem}.header{position:sticky;top:0;z-index:5;background:#11110ff2;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 5vw;border-bottom:1px solid var(--line)}.brand{font-weight:bold;letter-spacing:.1em;white-space:nowrap}.brand b{color:var(--gold)}.brand small{display:block;color:var(--muted);font-size:.6rem;letter-spacing:.04em}nav{display:flex;gap:20px;font-size:.9rem}nav a:hover,a:hover{color:var(--gold)}select{background:#24221c;color:white;border:1px solid var(--line);padding:8px;max-width:110px}.menu-button{display:none;background:transparent;color:var(--gold);border:1px solid var(--line);padding:7px}.hero{position:relative;min-height:570px;display:grid;place-items:center;text-align:center;background:url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=2000&q=85') center/cover}.shade{position:absolute;inset:0;background:linear-gradient(#0c0c0bbb,#0c0c0b99),linear-gradient(0deg,#11110f,transparent 35%)}.hero-content{position:relative;max-width:850px;padding:70px 22px}.eyebrow{color:var(--gold);letter-spacing:.12em;font-size:.8rem}.ornament{color:var(--gold);font-size:1.4rem;margin:20px}.hero h1{font:600 clamp(2.8rem,8vw,6rem) 'Playfair Display',Georgia,serif;letter-spacing:.04em;margin:0;line-height:1.15}.hero h1 span{color:var(--gold)}.hero h2{font-size:clamp(1.4rem,3vw,2.2rem)}.hero-content>p:not(.eyebrow){max-width:650px;margin:15px auto;color:#e0d8c9}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px}.button{display:inline-block;padding:11px 23px;border:1px solid var(--gold);font-weight:bold}.gold{background:var(--gold);color:#16130c}.outline{color:white;background:#11110f55}.section{padding:75px 6vw;text-align:center}.section h2,.sustain h2,.contact-band h2{font:500 clamp(2rem,4vw,3rem) 'Playfair Display',Georgia,serif;margin:8px 0 18px}.section>p:not(.eyebrow){color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px;text-align:start}.product{background:var(--panel);border:1px solid var(--line);padding-bottom:18px}.product img{width:100%;height:260px;object-fit:cover}.product h3,.product p{margin:14px 18px}.product p{color:var(--muted);font-size:.9rem}.sustain{text-align:center;padding:75px 7vw;background:radial-gradient(ellipse at top,#304839,#171d18 75%);border-block:1px solid #3c5140}.sustain>p:not(.eyebrow){max-width:750px;margin:0 auto 25px;color:#d5dbd2}.contact-band{display:flex;justify-content:space-between;align-items:center;gap:25px;text-align:start}.contact-band p{color:var(--muted)}footer{padding:35px 6vw;background:#090908;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.85rem}footer p{width:100%;margin:0}.assistant-launcher{position:fixed;bottom:20px;right:20px;z-index:8;background:var(--gold);color:#111;border:0;padding:13px 17px;font-weight:bold;cursor:pointer}#assistantPanel{position:fixed;z-index:9;right:20px;bottom:75px;width:min(340px,calc(100vw - 40px));padding:20px;background:#1b1a17;border:1px solid var(--gold);box-shadow:0 10px 35px #000b}#assistantPanel input{width:100%;padding:10px;background:#0e0e0c;color:white;border:1px solid var(--line);margin-bottom:8px}.close{float:right;background:none;color:white;border:0;font-size:1.5rem}.sr-only{position:absolute}@media(max-width:850px){.header{flex-wrap:wrap}.menu-button{display:block}nav{display:none;order:4;width:100%;flex-direction:column;gap:10px}nav.open{display:flex}.grid{grid-template-columns:1fr 1fr}.contact-band{align-items:flex-start;flex-direction:column}}@media(max-width:560px){.grid{grid-template-columns:1fr}.hero{min-height:520px}.header{padding:13px 4vw}.brand{font-size:.95rem}.section{padding:55px 5vw}.product img{height:240px}footer{align-items:flex-start;flex-direction:column}footer p{width:auto}}html[dir=ltr] .assistant-launcher{right:auto;left:20px}html[dir=ltr] #assistantPanel{right:auto;left:20px}
 .page-hero{text-align:center;padding:75px 6vw;background:linear-gradient(120deg,#292318,#10100e);border-bottom:1px solid var(--line)}.page-hero h1{font:500 clamp(2.4rem,6vw,4rem) 'Playfair Display',Georgia,serif}.page-hero p{color:var(--muted)}.content-wrap{max-width:1050px;margin:auto;padding:45px 6vw 80px}.content-wrap h2{color:var(--gold);font:500 2rem 'Playfair Display',Georgia,serif}.content-wrap p,.content-wrap li{color:#d3cbbb}.collection-row{display:grid;grid-template-columns:200px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}.collection-row img{width:100%;height:155px;object-fit:cover}.note-box{padding:18px;border-inline-start:3px solid var(--gold);background:#1c1b16;margin:22px 0}.contact-form{display:grid;gap:14px;max-width:620px}.contact-form input,.contact-form textarea,.contact-form select{display:block;width:100%;padding:12px;margin-top:6px;background:#1b1a17;color:white;border:1px solid var(--line);font:inherit}.contact-form textarea{min-height:120px}@media(max-width:580px){.collection-row{grid-template-columns:1fr}.collection-row img{height:220px}}
+
+/* STARKAN GOLD - Floating WhatsApp contact */
+.starkan-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 18px;
+  border-radius: 50px;
+  background: #167d48;
+  color: #fff !important;
+  text-decoration: none !important;
+  font: 600 15px/1.2 Arial, sans-serif;
+  box-shadow: 0 5px 20px #0003;
+  transition: transform .2s, background .2s;
+}
+.starkan-whatsapp:hover {
+  background: #11683b;
+  transform: translateY(-3px);
+}
+.starkan-whatsapp svg { width: 23px; height: 23px; fill: currentColor; }
+html[dir="rtl"] .starkan-whatsapp { right: auto; left: 22px; }
+@media(max-width:600px) {
+  .starkan-whatsapp { right: 14px; bottom: 14px; padding: 12px; }
+  html[dir="rtl"] .starkan-whatsapp { right: auto; left: 14px; }
+  .starkan-whatsapp .wa-label { display: none; }
+}
