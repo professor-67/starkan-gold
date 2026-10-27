@@ -47,6 +47,7 @@ const D = {
 "STARKAN GOLD":["STARKAN GOLD","STARKAN GOLD","STARKAN GOLD","STARKAN GOLD"],
 "علامة تحتفي بالحرفية المغربية وتسعى إلى تقديمها للعملاء المحليين والدوليين. نعمل على تطوير مجموعات المنسوجات والديكور والهدايا بالتعاون مع الحرفيين والموردين.":["Une marque qui célèbre l’artisanat marocain et le fait découvrir aux clients locaux et internationaux. Nous développons des collections de textiles, de décoration et de cadeaux avec des artisans et fournisseurs.","A brand celebrating Moroccan craftsmanship for local and international customers. We develop textile, décor and gift collections with artisans and suppliers.","Eine Marke, die marokkanisches Handwerk für lokale und internationale Kunden präsentiert. Wir entwickeln Textil-, Deko- und Geschenkekollektionen mit Kunsthandwerkern und Lieferanten.","Бренд, который знакомит местных и международных клиентов с марокканским ремеслом. Мы развиваем коллекции текстиля, декора и подарков вместе с мастерами и поставщиками."],
 "وكيل الأعمال: MONSSIF EL AZAR":["Représentant commercial : MONSSIF EL AZAR","Business Representative: MONSSIF EL AZAR","Geschäftsvertreter: MONSSIF EL AZAR","Представитель по развитию бизнеса: MONSSIF EL AZAR"],
+"Business Representative of STARKAN GOLD":["Représentant commercial de STARKAN GOLD","Business Representative of STARKAN GOLD","Geschäftsvertreter von STARKAN GOLD","Представитель STARKAN GOLD по развитию бизнеса"],
 "المؤسس: Abdessamad Daraoui":["Fondateur : Abdessamad Daraoui","Founder: Abdessamad Daraoui","Gründer: Abdessamad Daraoui","Основатель: Abdessamad Daraoui"],
 "تقديم منتجات مغربية ذات قيمة حرفية وجمالية، وبناء علاقات طويلة الأمد مع العملاء والفنادق والمتاجر والشركاء.":["Proposer des produits marocains de qualité artisanale et esthétique, et bâtir des relations durables avec les clients, hôtels, boutiques et partenaires.","Offering Moroccan products with craftsmanship and aesthetic value, while building lasting relationships with customers, hotels, shops and partners.","Marokkanische Produkte mit handwerklichem und ästhetischem Wert anbieten und langfristige Beziehungen zu Kunden, Hotels, Geschäften und Partnern aufbauen.","Предлагать марокканские изделия с ремесленной и эстетической ценностью и выстраивать долгосрочные отношения avec клиентами, отелями, магазинами и партнёрами."]
 };
@@ -93,10 +94,12 @@ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
 const nodes=[];
 while(walker.nextNode())nodes.push(walker.currentNode);
 for(const n of nodes){
-const original=norm(n.nodeValue);
+if(!originalTexts.has(n))originalTexts.set(n,n.nodeValue);
+const source=originalTexts.get(n);
+const original=norm(source);
 if(D[original] && n.nodeValue.trim()) {
-const leading=n.nodeValue.match(/^\s*/)[0];
-const trailing=n.nodeValue.match(/\s*$/)[0];
+const leading=source.match(/^\s*/)[0];
+const trailing=source.match(/\s*$/)[0];
 n.nodeValue=leading+D[original][idx]+trailing;
 }
 }

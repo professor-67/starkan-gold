@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>STARKAN GOLD | Admin Dashboard</title>
+<style>
+:root{--bg:#0d0d0d;--panel:#171717;--gold:#d4af37;--text:#f5f0df;--muted:#aaa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+.layout{display:flex;min-height:100vh}
+aside{width:245px;padding:28px 18px;background:#111;border-right:1px solid #302817}
+.brand{font-size:21px;font-weight:bold;color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+.subtitle{color:var(--muted);font-size:12px;margin-bottom:35px}
+nav a{display:block;padding:13px 14px;margin:7px 0;border-radius:8px;color:#ccc;text-decoration:none}
+nav a.active,nav a:hover{background:#292316;color:var(--gold)}
+main{flex:1;padding:32px;min-width:0}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:30px}
+h1{font-size:27px;margin:0 0 8px}
+p{color:var(--muted)}
+.badge{border:1px solid #655323;color:var(--gold);padding:9px 13px;border-radius:20px;font-size:12px}
+.notice{padding:14px 16px;border:1px solid #5a4921;background:#211c10;border-radius:10px;color:#e5d29a;margin-bottom:25px;font-size:13px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid #292929;border-radius:13px;padding:22px}
+.label{font-size:13px;color:var(--muted)}
+.value{font-size:30px;font-weight:bold;margin:17px 0 9px;color:var(--gold)}
+.detail{font-size:12px;color:var(--muted)}
+.section{margin-top:25px;display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+.section h2{font-size:17px;margin:0 0 18px}
+.empty{border:1px dashed #49402c;border-radius:9px;padding:28px 18px;text-align:center;color:var(--muted);font-size:13px;line-height:1.8}
+footer{margin-top:28px;color:#777;font-size:12px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section{grid-template-columns:1fr}}
+@media(max-width:650px){.layout{display:block}aside{width:100%;border-right:0;border-bottom:1px solid #302817;padding:18px}nav{display:flex;gap:5px;overflow:auto}nav a{white-space:nowrap}main{padding:20px 14px}header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr 1fr}.card{padding:15px}.value{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="brand">STARKAN GOLD</div>
+  <div class="subtitle">ADMINISTRATION · PRIVATE AREA</div>
+  <nav>
+    <a class="active" href="#overview">Dashboard</a>
+    <a href="#traffic">Website traffic</a>
+    <a href="#products">Products</a>
+    <a href="#orders">Orders</a>
+    <a href="#customers">Customers</a>
+    <a href="#security">Security</a>
+  </nav>
+</aside>
+<main>
+<header>
+  <div><h1>Dashboard Overview</h1><p>Monitor your store's activity in one place.</p></div>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><select aria-label="Language" onchange="setAdminLanguage(this.value)"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option><option value="de">Deutsch</option><option value="ru">Русский</option></select><span class="badge">ADMIN DASHBOARD · PREVIEW</span></div>
+</header>
+<div class="notice"><strong>Preview mode:</strong> These metrics are not connected to live data yet. No visitor, order or sales figures are invented. Authentication must be implemented on the server before this dashboard is exposed publicly.</div>
+<div class="grid" id="overview">
+  <article class="card"><div class="label">Website visitors</div><div class="value">—</div><div class="detail">Analytics connection pending</div></article>
+  <article class="card"><div class="label">Orders</div><div class="value">—</div><div class="detail">Order system not connected</div></article>
+  <article class="card"><div class="label">Revenue</div><div class="value">—</div><div class="detail">Sales data not connected</div></article>
+  <article class="card"><div class="label">Products</div><div class="value">—</div><div class="detail">Inventory data not connected</div></article>
+</div>
+<div class="section">
+  <article class="card" id="traffic"><h2>Website activity</h2><div class="empty">Traffic chart will appear after analytics is connected.<br>Visitor data will be based on actual measurements.</div></article>
+  <article class="card" id="products"><h2>Store overview</h2><div class="empty">Product and inventory summaries will appear when a trusted data source is connected.</div></article>
+  <article class="card" id="orders"><h2>Recent orders</h2><div class="empty">No order data source connected yet.</div></article>
+  <article class="card" id="customers"><h2>Customer activity</h2><div class="empty">Customer statistics will appear after the relevant systems are configured.</div></article>
+</div>
+<footer id="security">STARKAN GOLD · Private administration interface prototype · Authentication not yet enabled.</footer>
+</main>
+</div>
+<script src="/admin.js"></script>
+</body>
+</html>
