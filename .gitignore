@@ -3,3 +3,7 @@ node_modules/
 .env
 node_modules/
 public-backup/
+
+.env
+.env.*
+!.env.example
