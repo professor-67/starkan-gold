@@ -260,7 +260,14 @@ app.get('/api/admin/status', requireAdmin, (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-  console.error('Request error:', err.message);
+  console.error('Request error:', {
+    method: req.method,
+    path: req.path,
+    message: err.message,
+    code: err.code,
+    stack: err.stack
+  });
+  if (res.headersSent) return next(err);
   res.status(500).send('An unexpected server error occurred.');
 });
 
