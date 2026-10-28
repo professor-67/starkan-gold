@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000;
 
 if (!process.env.SESSION_SECRET || !process.env.ADMIN_USERNAME ||
     !process.env.ADMIN_PASSWORD_HASH) {
-  throw new Error('Missing SESSION_SECRET, ADMIN_USERNAME, or ADMIN_PASSWORD_HASH in .env');
+  console.error('Admin environment variables must be configured in Render Environment.');
 }
 
 if (production) app.set('trust proxy', 1);
