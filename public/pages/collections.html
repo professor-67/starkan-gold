@@ -62,6 +62,66 @@ a{color:inherit;text-decoration:none}
 @media(max-width:650px){.sg-top{justify-content:center;text-align:center;flex-wrap:wrap;font-size:10px}.sg-header{gap:10px;padding:10px 4%}.sg-brand{font-size:19px;gap:7px}.sg-brand img{width:37px;height:37px}.sg-tools select{max-width:90px;font-size:11px}.sg-nav{gap:15px;font-size:12px}.sg-hero{min-height:220px}.sg-collections{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:10px}.sg-card{min-height:430px;padding:24px 9px 10px;border-radius:38% 38% 0 0/8% 8% 0 0}.sg-card h2{font-size:17px}.sg-card .sg-desc{font-size:11px}.sg-card .sg-desc-ar{font-size:11px}.sg-thumbs img{height:42px}.sg-trust{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:20px 12px}.sg-trust-item{justify-content:flex-start}.sg-bottom{align-items:flex-start;flex-direction:column;gap:8px}.sg-footer{align-items:flex-start;flex-direction:column}}
 @media(max-width:390px){.sg-collections{grid-template-columns:1fr}.sg-card{min-height:430px}.sg-card h2{font-size:21px}.sg-card .sg-desc{font-size:12px}.sg-thumbs img{height:55px}}
 </style>
+
+<style>
+
+/* STARKAN GOLD — reference-inspired luxury collection cards */
+.sg-header { position:relative; }
+.sg-collections {
+  gap: 12px !important;
+  padding: 0 14px 24px !important;
+  background: #090806 !important;
+}
+.sg-card {
+  border: 1.5px solid #c9a45e !important;
+  border-radius: 115px 115px 5px 5px !important;
+  min-height: 500px !important;
+  padding: 24px 10px 12px !important;
+  background-color: #17110b !important;
+  box-shadow: inset 0 0 24px #0009, 0 0 12px #c9a45e18;
+}
+.sg-card:before {
+  background-size: cover !important;
+  background-position: center !important;
+  filter: saturate(1.08);
+}
+.sg-card:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg,#09080655 0%,#09080665 42%,#090806ef 100%);
+  pointer-events: none;
+}
+.sg-number { color:#e2c17e !important; }
+.sg-symbol { color:#f3d99c !important; }
+.sg-card h2 { text-shadow:0 2px 8px #000 !important; }
+.sg-desc, .sg-desc-ar { text-shadow:0 2px 5px #000 !important; }
+.sg-button {
+  background:#f4e4c1 !important;
+  color:#2b1c0d !important;
+  border:1px solid #c9a45e !important;
+  border-radius:30px !important;
+}
+.sg-thumbs img {
+  border:1px solid #c9a45e !important;
+  border-radius:5px !important;
+  object-fit:cover !important;
+}
+.sg-trust { border-top:1px solid #9c7a3c !important; }
+@media(max-width:1050px) {
+  .sg-collections { grid-template-columns:repeat(3,minmax(0,1fr)) !important; }
+  .sg-card { min-height:460px !important; }
+}
+@media(max-width:650px) {
+  .sg-collections { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  .sg-card { min-height:430px !important; border-radius:75px 75px 5px 5px !important; }
+}
+@media(max-width:390px) {
+  .sg-collections { grid-template-columns:1fr !important; }
+}
+
+</style>
 </head>
 <body>
 <div class="sg-top">
